@@ -12,20 +12,17 @@
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
   </head>
+
   <body>
-    {% include "navbar.html" %}
 
     {{ content | safe }}
 
-    {% include "footer.html" %}
+    {{ collections.all[0].template.templateData.globalData | consoleLog | safe }}
 
     <script src="/static/js/alpine.js"></script>
 
-    {% if path == "home" %}
+    {% if page.url == "/" %}
       <!-- Netlify Identity Widget -->
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

@@ -2,8 +2,8 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: {
-    mode: "all",
-    content: ["./**/*.html"],
+    mode: 'all',
+    content: ['./**/*.html'],
     options: {
       whitelist: [],
     },
@@ -49,4 +49,4 @@ module.exports = {
     },
   },
   variants: {},
-};
+}

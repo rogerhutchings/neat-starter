@@ -60,7 +60,7 @@ collections:
     files:
       - label: Home
         name: home
-        file: src/_data/home.yaml
+        file: src/index.md
         fields:
           - label: Title
             name: title
@@ -116,7 +116,7 @@ collections:
 
       - label: Join Us
         name: join_us
-        file: src/_data/join_us.yaml
+        file: src/join_us.md
         fields:
           - label: Title
             name: title
@@ -127,7 +127,7 @@ collections:
 
       - label: Privacy Policy
         name: privacy_policy
-        file: src/_data/privacy_policy.yaml
+        file: src/privacy_policy.md
         fields:
           - label: Title
             name: title
@@ -138,7 +138,7 @@ collections:
 
       - label: GDPR Data Privacy Notice
         name: gdpr_data_privacy_notice
-        file: src/_data/gdpr_data_privacy_notice.yaml
+        file: src/gdpr_data_privacy_notice.md
         fields:
           - label: Title
             name: title
@@ -149,7 +149,7 @@ collections:
 
       - label: Terms of Use
         name: terms_of_use
-        file: src/_data/terms_of_use.yaml
+        file: src/terms_of_use.md
         fields:
           - label: Title
             name: title
@@ -160,7 +160,7 @@ collections:
 
       - label: Cookie Policy
         name: cookie_policy
-        file: src/_data/cookie_policy.yaml
+        file: src/cookie_policy.md
         fields:
           - label: Title
             name: title
