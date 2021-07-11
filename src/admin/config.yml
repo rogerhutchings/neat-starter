@@ -1,68 +1,170 @@
 backend:
-  # Use netlify identity as backend
   name: git-gateway
   branch: master
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
-media_folder: "src/static/img"
-public_folder: "/static/img"
 
-# Please run "npx netlify-cms-proxy-server" for local backend
+media_folder: src/static/img
+
+public_folder: /static/img
+
 local_backend: true
-# publish_mode: editorial_workflow
+
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: Blog
+    name: blog
+    folder: src/posts
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
-  - label: "Settings"
-    name: "settings"
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Author
+        name: author
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Body
+        name: body
+        widget: markdown
+
+  - label: Coverage Cup
+    name: coverage_cup
+    folder: src/coverage_cup
+    create: true
     editor:
       preview: false
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Author
+        name: author
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Body
+        name: body
+        widget: markdown
+
+  - label: Pages
+    name: pages
     files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
+      - label: Home
+        name: home
+        file: src/_data/home.yaml
         fields:
-          - label: Nav Items
-            name: items
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Services
+        name: services
+        file: src/_data/services.yaml
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Clients
+        name: clients
+        file: src/_data/clients.yaml
+        fields:
+          - label: Body
+            name: body
+            widget: markdown
+          - label: Clients
+            name: clients
             widget: list
-            allow_add: false
-            collapsed: false
             fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+              - label: Client Name
+                name: name
+                widget: string
+
+      - label: Why Spark?
+        name: why_spark
+        file: src/_data/why_spark.yaml
         fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Contact Us
+        name: contact_us
+        file: src/_data/contact_us.yaml
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Join Us
+        name: join_us
+        file: src/_data/join_us.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Privacy Policy
+        name: privacy_policy
+        file: src/_data/privacy_policy.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: GDPR Data Privacy Notice
+        name: gdpr_data_privacy_notice
+        file: src/_data/gdpr_data_privacy_notice.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Terms of Use
+        name: terms_of_use
+        file: src/_data/terms_of_use.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+
+      - label: Cookie Policy
+        name: cookie_policy
+        file: src/_data/cookie_policy.yaml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
