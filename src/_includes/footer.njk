@@ -1,0 +1,71 @@
+{% set siteMapLinks = [
+  { text: 'Home', href: '/' },
+  { text: 'How We Work', href: '/create-engage-and-influence' },
+  { text: 'Clients', href: '/clients' },
+  { text: 'Why Spark?', href: '/why-spark' },
+  { text: 'Our Work', href: '/our-work' },
+  { text: 'Clients In The News', href: '/coverage' },
+  { text: 'Blog', href: '/blog' },
+  { text: 'Contact', href: '/contact-us' },
+  { text: 'Meet The Team', href: '/' },
+  { text: 'Join Us', href: '/join-us' }
+] %}
+
+{% set servicesLinks = [
+  {
+    text: 'Storytelling & Messaging',
+    href: '/services#storytelling-messaging'
+  },
+  {
+    text: 'Strategy & Planning',
+    href: '/services#strategy-planning'
+  },
+  {
+    text: 'PR, Marketing & Digital Content',
+    href: '/services#pr-marketing-digital-content'
+  },
+  {
+    text: 'Influencer Relations',
+    href: '/services#influencer-relations'
+  },
+  { text: 'Measurement', href: '/services#measurement' },
+  { text: 'International', href: '/services#international' }
+] %}
+
+{% set newsLinks = [
+  {
+    text: 'Test Link 1',
+    href: '/'
+  },
+  {
+    text: 'Test Link 2',
+    href: '/'
+  }
+] %}
+
+{% macro footerLink(href, text) %}
+  <a href={{ href }} class="hover:underline">{{ text }}</a>
+{% endmacro %}
+
+{% macro linkList(list, title) %}
+<div>
+  <div class="mb-2 text-xl">{{ title }}</div>
+  <ul class="list-dash flex flex-col gap-y-2">
+    {% for link in list %}
+      <li>
+        {{ footerLink(link.href, link.text) }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro %}
+
+<footer class="relative bg-black">
+  <div class="relative z-10 px-4 max-w-5xl text-white text-sm md:mx-auto">
+    <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {{ linkList(siteMapLinks, 'Sitemap') }}
+      {{ linkList(servicesLinks, 'Services') }}
+      {{ linkList(newsLinks, 'News') }}
+    </section>
+  </div>
+</footer>

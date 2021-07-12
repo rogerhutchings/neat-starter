@@ -12,13 +12,66 @@
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      cross-origin="true"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="">
 
-    {{ content | safe }}
+    <header class="relative min-h-header" style="background: gray">
+      {# <Image
+        src={headerBgImage}
+        class="z-0"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        priority={true}
+        quality={85}
+        {...headerBgImageProps}
+        aria-hidden="true"
+      /> #}
+      <div class="relative z-10 hidden justify-between mx-auto pt-16 max-w-5xl md:flex">
+        {% if page.url == "/" %}
+          <img src="/static/images/icons/logo_text-bottom.svg" />
+        {% else %}
+          <img src="/static/images/icons/logo_text-bottom.svg" />
+        {% endif %}
+
+
+
+      </div>
+    </header>
+
+    <main class="relative">
+      {# {mainBgImage && (
+        <Image
+          src={mainBgImage}
+          class="z-0"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority={true}
+          quality={85}
+          aria-hidden="true"
+        />
+      )} #}
+      <div class="relative z-20 flex flex-col">
+      <div class="relative z-20 flex flex-col -mb-0 -mt-24 mx-auto max-w-5xl bg-white">
+        {{ content | safe }}
+      </div>
+      </div>
+    </main>
 
     {{ collections.all[0].template.templateData.globalData | consoleLog | safe }}
+
+    {% include 'footer.njk' %}
 
     <script src="/static/js/alpine.js"></script>
 

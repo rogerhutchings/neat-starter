@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
     './node_modules/alpinejs/dist/alpine.js': './static/js/alpine.js',
   })
 
+  eleventyConfig.addPassthroughCopy('./src/static/images')
+
   return {
     dir: {
       input: 'src',
