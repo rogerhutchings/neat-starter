@@ -1,0 +1,22 @@
+{% set links = [
+  { text: 'Services', href: '/services/' },
+  { text: 'Clients', href: '/clients/' },
+  { text: 'Why Spark?', href: '/why-spark/' },
+  { text: 'Blog', href: '/blog/' },
+  { text: 'Contact Us', href: '/contact-us/' },
+  { text: 'Join Us', href: '/join-us/' }
+] %}
+
+<nav>
+  <ul class="flex items-end h-full space-x-4">
+    {% for link in links %}
+      {% set isActive = page.url == link.href %}
+      {% set borderOpacity = 'border-opacity-100' if isActive else 'border-opacity-0' %}
+      <li>
+        <a href="{{ link.href }}" class="text-white uppercase hover:text-orange transition hover:border-b-3 border-b-4 border-orange {{ borderOpacity }}">
+          {{ link.text }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

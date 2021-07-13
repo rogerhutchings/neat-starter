@@ -8,7 +8,7 @@
       {{ title }} | Spark Communications - Technology PR
     </title>
     {% if description %}
-      <meta name="description" content="{{description}}"/>
+      <meta name="description" content="{{ description }}"/>
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
@@ -26,7 +26,7 @@
   <body class="">
 
     <header class="relative min-h-header" style="background: gray">
-      <div class="relative z-10 hidden justify-between mx-auto pt-16 max-w-5xl md:flex">
+      <div class="relative z-10 hidden justify-between mx-auto pt-16 max-w-5xl md:flex p-4">
         {% if page.url == "/" %}
           <div class="text-white flex">
             {{ '/src/static/images/icons/logo_text-bottom.svg' | svgContents('fill-current h-20') | safe }}
@@ -38,6 +38,8 @@
             </a>
           </div>
         {% endif %}
+
+        {% include 'top-navigation.njk' %}
       </div>
     </header>
 
