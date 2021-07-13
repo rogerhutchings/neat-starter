@@ -1,0 +1,6 @@
+{% macro heading(text, level=1) %}
+  {% set tag = 'h' + level %}
+  <{{ tag }} class="text-orange uppercase text-center text-2xl my-6">
+    {{ text }}
+  </{{ tag }}>
+{% endmacro %}

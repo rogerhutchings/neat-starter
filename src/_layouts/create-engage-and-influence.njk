@@ -1,0 +1,13 @@
+---
+layout: top-bottom-overlay
+---
+
+{% from "macros/icon-header.njk" import iconHeader %}
+{% from "macros/heading.njk" import heading %}
+
+{{ iconHeader('/src/static/images/icons/circle-hands.svg') }}
+<div class="p-4 w-full ">
+{{ heading(title) }}
+
+{{ content | safe }}
+</div>

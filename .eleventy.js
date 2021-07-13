@@ -1,5 +1,6 @@
 const yaml = require('js-yaml')
 const inspect = require('util').inspect
+const svgContents = require("eleventy-plugin-svg-contents")
 
 module.exports = function (eleventyConfig) {
   // Add a debug filter - via https://github.com/11ty/eleventy/issues/1526#issuecomment-731855231
@@ -8,6 +9,8 @@ module.exports = function (eleventyConfig) {
     'consoleLog',
     (content) => `<script>console.info(${inspect(content)})</script>`
   )
+
+  eleventyConfig.addPlugin(svgContents)
 
   // Add YAML support
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.safeLoad(contents))

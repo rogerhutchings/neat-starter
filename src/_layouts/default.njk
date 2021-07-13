@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      {{title}}
+      {{ title }} | Spark Communications - Technology PR
     </title>
     {% if description %}
       <meta name="description" content="{{description}}"/>
@@ -26,52 +26,33 @@
   <body class="">
 
     <header class="relative min-h-header" style="background: gray">
-      {# <Image
-        src={headerBgImage}
-        class="z-0"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        priority={true}
-        quality={85}
-        {...headerBgImageProps}
-        aria-hidden="true"
-      /> #}
       <div class="relative z-10 hidden justify-between mx-auto pt-16 max-w-5xl md:flex">
         {% if page.url == "/" %}
-          <img src="/static/images/icons/logo_text-bottom.svg" />
+          <div class="text-white flex">
+            {{ '/src/static/images/icons/logo_text-bottom.svg' | svgContents('fill-current h-20') | safe }}
+          </div>
         {% else %}
-          <img src="/static/images/icons/logo_text-bottom.svg" />
+          <div class="flex">
+            <a href="/" class="text-white hover:text-orange">
+              {{ '/src/static/images/icons/logo_text-bottom.svg' | svgContents('fill-current h-20') | safe }}
+            </a>
+          </div>
         {% endif %}
-
-
-
       </div>
     </header>
 
-    <main class="relative">
-      {# {mainBgImage && (
-        <Image
-          src={mainBgImage}
-          class="z-0"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority={true}
-          quality={85}
-          aria-hidden="true"
-        />
-      )} #}
-      <div class="relative z-20 flex flex-col">
-      <div class="relative z-20 flex flex-col -mb-0 -mt-24 mx-auto max-w-5xl bg-white">
-        {{ content | safe }}
-      </div>
-      </div>
+    <main class="relative px-4 bg-silver">
+      {% block content %}default content{% endblock %}
     </main>
 
     {{ collections.all[0].template.templateData.globalData | consoleLog | safe }}
 
-    {% include 'footer.njk' %}
+    <footer class="relative bg-black">
+      <div class="relative z-10 px-4 pb-12 max-w-5xl text-white text-sm md:mx-auto {% block footerTopPaddingClass %}pt-12{% endblock %}">
+        {% include 'footer-content.njk' %}
+      </div>
+    </footer>
+
 
     <script src="/static/js/alpine.js"></script>
 

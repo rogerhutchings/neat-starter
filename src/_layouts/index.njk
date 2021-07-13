@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% from "macros/icon-header.njk" import iconHeader %}
+
+{{ iconHeader() }}
+
 {{ title }}
 
 {{ content | safe }}

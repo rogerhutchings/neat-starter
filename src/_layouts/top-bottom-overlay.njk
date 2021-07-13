@@ -1,0 +1,11 @@
+{% extends './default.njk' %}
+
+{% block content %}
+  <div class="relative z-20 flex flex-col">
+    <div class="relative z-20 w-full flex flex-col -mb-40 -mt-24 mx-auto max-w-5xl bg-white">
+      {{ content | safe }}
+    </div>
+  </div>
+{% endblock %}
+
+{% block footerTopPaddingClass %}pt-64{% endblock %}
