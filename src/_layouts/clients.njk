@@ -1,0 +1,23 @@
+---
+layout: top-bottom-overlay
+---
+
+{% from "macros/icon-header.njk" import iconHeader %}
+{% from "macros/heading.njk" import heading %}
+
+{{ iconHeader('/src/static/images/icons/circle-handshake.svg') }}
+
+<div>
+  {{ heading(title) }}
+  <div class="markdown text-center max-w-xl mx-auto">
+    {{ content | safe }}
+  </div>
+</div>
+
+<ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
+  {% for client in clients %}
+    <li class="flex justify-center items-center">
+      <img src="/{{ client.logo }}" alt="{{ client.name }} logo" />
+    </li>
+  {% endfor %}
+</ul>

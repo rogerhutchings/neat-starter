@@ -1,12 +1,14 @@
 ---
-title: Join Us
-layout: default
+title: Contact Us
+layout: contact-us
+description: We are in the centre of London so the quickest way to get to us is
+  by tube. Feel free to drop by, there is always someone in between 8.30 and
+  6.30 Monday to Friday. We’re on the 3rd Floor, 100 Oxford Street (above the
+  100 Club between Oxford Circus and Tottenham Court Road tube stations),
+  London, W1D 1LN.
+directions: "Directions: From Oxford Circus tube station (Central, Victoria and
+  Bakerloo lines) head east we are on the left after Berners Street between
+  Claire’s Accessories and Boots. From Tottenham Court Road tube station
+  (Central and Northern lines) head west. We are on the right after Newman
+  Street."
 ---
-
-We are always looking for bright sparks at all levels. Hiring great people is the reason we win and keep accounts, but we also believe that our agency culture has played a key role in our success. We believe that everyone’s voice within the agency should be valued and encourage a flat approach to client work. Junior members of the team can take ownership of key initiatives and agency directors are heavily involved in campaign execution. There is always an opportunity to put your creative skills to the test and see your ideas come to life.
-
-We have got great relationships with the media, not just because of our social events such as Bubble Football and Table Tennis, but also because they rate our story creation. PR Week surveyed tech journalists and found we were the most rated agency for pitching a good story.
-
-The team is enthusiastic, entrepreneurial, ambitious and, last but not least, friendly. Work-life balance is very important to us – we want people out of the office on time – team members are only 2/3rds billable so that they have space for training, creative thinking and having a life.
-
-Over 80% of our clients have come through referral. They want proactivity, they want people that will drive their content strategies and most of all they want to work with people that are grounded and won’t just say yes to them because they are the client. If that sounds like you then we want to hear from you.

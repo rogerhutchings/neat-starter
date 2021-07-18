@@ -6,4 +6,7 @@
   .markdown p {
     @apply mb-6;
   }
+  .markdown a {
+    @apply text-orange hover:underline;
+  }
 }

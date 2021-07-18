@@ -1,12 +1,13 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: master
 
-media_folder: src/static/img
+media_folder: src/static/images
 
-public_folder: /static/img
+public_folder: /static
 
-local-backend: true
 
 collections:
   - label: Blog
@@ -71,7 +72,7 @@ collections:
 
       - label: Services
         name: services
-        file: src/-data/services.yaml
+        file: src/_data/services.yaml
         fields:
           - label: Body
             name: body
@@ -79,7 +80,7 @@ collections:
 
       - label: Clients
         name: clients
-        file: src/-data/clients.yaml
+        file: src/clients.md
         fields:
           - label: Body
             name: body
@@ -91,10 +92,14 @@ collections:
               - label: Client Name
                 name: name
                 widget: string
+              - label: Client Logo
+                name: logo
+                widget: image
+                media_folder: static/images/clients
 
       - label: Why Spark?
         name: why-spark
-        file: src/-data/why-spark.yaml
+        file: src/why-spark.md
         fields:
           - label: Title
             name: title
@@ -102,16 +107,29 @@ collections:
           - label: Body
             name: body
             widget: markdown
+          - label: Quotes
+            name: quotes
+            widget: list
+            fields:
+              - label: Client Name
+                name: name
+                widget: string
+              - label: Quote
+                name: quote
+                widget: string
 
       - label: Contact Us
         name: contact-us
-        file: src/-data/contact-us.yaml
+        file: src/contact-us.md
         fields:
           - label: Title
             name: title
             widget: string
-          - label: Body
-            name: body
+          - label: Description
+            name: description
+            widget: markdown
+          - label: Directions
+            name: directions
             widget: markdown
 
       - label: Join Us
@@ -137,8 +155,8 @@ collections:
             widget: markdown
 
       - label: GDPR Data Privacy Notice
-        name: gdpr-data-privacy-notice
-        file: src/gdpr-data-privacy-notice.md
+        name: gdpr_data-privacy-notice
+        file: src/gdpr_data-privacy-notice.md
         fields:
           - label: Title
             name: title

@@ -1,0 +1,35 @@
+---
+layout: top-overlay
+---
+
+{% from "macros/icon-header.njk" import iconHeader %}
+{% from "macros/heading.njk" import heading %}
+{% from "macros/speech-bubble.njk" import speechBubble %}
+
+{{ iconHeader('/src/static/images/icons/circle-hands.svg') }}
+
+<div class="p-4 max-w-xl mx-auto markdown">
+  {{ heading(title) }}
+  <div class="markdown text-center">
+    {{ content | safe }}
+  </div>
+</div>
+
+<div class="px-4 pb-8" style='background: #ffffffcc'>
+  <ul class="flex flex-wrap items-end justify-center mb-4 pt-4 space-x-4 space-y-4">
+    {% set side = cycler("left", "right") %}
+    {% set width = cycler('318px', '465px', '424px', '408px', '312px', '376px') %}
+    {% set color = cycler('purple', 'orange', 'gray', 'pink') %}
+    {% for quote in quotes %}
+      <li style="width: {{ width.next() }}">
+        {{ speechBubble(quote.quote, quote.name, side.next(), color.next()) }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{{ iconHeader('/src/static/images/icons/circle-hands.svg') }}
+
+<div class="p-4 max-w-xl mx-auto markdown">
+  {{ heading('Meet the team') }}
+</div>
