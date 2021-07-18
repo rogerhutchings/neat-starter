@@ -16,8 +16,10 @@ layout: top-bottom-overlay
 
 <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
   {% for client in clients %}
-    <li class="flex justify-center items-center">
-      <img src="/{{ client.logo }}" alt="{{ client.name }} logo" />
+    <li class="aspect-w-4 aspect-h-3">
+      <div class="flex justify-center items-center">
+        <img src="/{{ client.logo }}" alt="{{ client.name }} logo" />
+      </div>
     </li>
   {% endfor %}
 </ul>
