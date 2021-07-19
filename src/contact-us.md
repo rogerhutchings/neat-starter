@@ -1,5 +1,6 @@
 ---
 title: Contact Us
+icon: '/src/static/images/icons/circle-phone.svg'
 layout: contact-us
 description: We are in the centre of London so the quickest way to get to us is
   by tube. Feel free to drop by, there is always someone in between 8.30 and

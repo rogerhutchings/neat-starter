@@ -1,36 +1,40 @@
----
-layout: top-bottom-overlay
----
+{% extends './top-bottom-overlay.njk' %}
 
 {% from "macros/icon-header.njk" import iconHeader %}
 {% from "macros/heading.njk" import heading %}
 
-{{ iconHeader('/src/static/images/icons/circle-phone.svg', padBottom=false) }}
+{% block headerImageSrc %}bg-img-tablet.jpg{% endblock %}
 
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4965.608191426261!2d-0.137795!3d51.51681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2b5e2453c9%3A0x5bb54e0fb38dde0!2sCentury%20House%2C%20Oxford%20St%2C%20London!5e0!3m2!1sen!2suk!4v1620074175437!5m2!1sen!2suk"
-  allowFullScreen=""
-  loading="lazy"
-  style="height: 32rem"
-></iframe>
+{% block topIcon %}
+  {{ iconHeader('/src/static/images/icons/circle-phone.svg', padBottom=false) }}
+{% endblock %}
 
-<div class="px-12 mx-auto">
+{% block subcontent %}
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4965.608191426261!2d-0.137795!3d51.51681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2b5e2453c9%3A0x5bb54e0fb38dde0!2sCentury%20House%2C%20Oxford%20St%2C%20London!5e0!3m2!1sen!2suk!4v1620074175437!5m2!1sen!2suk"
+    allowFullScreen=""
+    loading="lazy"
+    style="height: 32rem"
+  ></iframe>
+
+  <div class="px-12 mx-auto">
     {{ heading(title) }}
 
-  <div class="flex flex-col pb-12 md:flex-row">
-    <div class=" border-orange md:border-r md:pr-12">
-      <div class="markdown">
-        {{ description | safe }}
-      </div>
+    <div class="flex flex-col pb-12 md:flex-row">
+      <div class=" border-orange md:border-r md:pr-12">
+        <div class="markdown">
+          {{ description | safe }}
+        </div>
 
-      <address class="mb-4 not-italic">
-        <div class="mb-4 text-orange">
+        <address class="mb-4 not-italic">
+          <div class="mb-4 text-orange">
           Century House
-          <br /> 100-102 Oxford Street
-          <br /> London <br />
+          <br/> 100-102 Oxford Street
+          <br/> London <br/>
           W1D 1LN
         </div>
-        <div class="mb-4">
+          <div class="mb-4">
           Call us on:
           <a
             href="tel:+442074360420"
@@ -38,8 +42,8 @@ layout: top-bottom-overlay
           >
             +44 (0)20 7436 0420
           </a>
-        </div>
-        <div>
+          </div>
+          <div>
           Email us:
           <a
             href="mailto:hello@sparkcomms.co.uk"
@@ -47,12 +51,13 @@ layout: top-bottom-overlay
           >
             hello@sparkcomms.co.uk
           </a>
-        </div>
-      </address>
+          </div>
+        </address>
+      </div>
+      <p class="md:pl-12">
+        {{ directions | safe }}
+      </p>
     </div>
-    <p class="md:pl-12">
-      {{ directions | safe }}
-    </p>
   </div>
 </div>
-</div>
+{% endblock %}

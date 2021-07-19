@@ -1,5 +1,6 @@
 ---
 title: Create, Engage & Influence
+icon: '/src/static/images/icons/circle-hands.svg'
 layout: create-engage-and-influence
 ---
 

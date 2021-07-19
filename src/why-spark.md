@@ -1,5 +1,6 @@
 ---
 layout: why-spark
+icon: '/src/static/images/icons/circle-hands.svg'
 title: Why people hire us
 quotes:
   - name: Gary Griffiths, CEO, iPass

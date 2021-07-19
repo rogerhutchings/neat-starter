@@ -1,5 +1,7 @@
 {% macro iconHeader(icon='/src/static/images/icons/circle-cog.svg', bgClass='bg-orange', padBottom=true) %}
 
+{% if icon %}
+
 <div
   aria-hidden="true"
   class="flex relative {% if padBottom %}mb-14{% endif %}"
@@ -7,4 +9,5 @@
   {{ icon | svgContents('absolute z-30 left-1/2 top-2 h-16 transform -translate-x-1/2 -translate-y-1/2 md:h-32') | safe }}
   <div class="z-20 w-full h-4 {{ bgClass }}"></div>
 </div>
+{% endif %}
 {% endmacro %}

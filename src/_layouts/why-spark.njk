@@ -1,13 +1,10 @@
----
-layout: top-overlay
----
+{% extends './top-overlay.njk' %}
 
-{% from "macros/icon-header.njk" import iconHeader %}
 {% from "macros/heading.njk" import heading %}
 {% from "macros/speech-bubble.njk" import speechBubble %}
 
-{{ iconHeader('/src/static/images/icons/circle-hands.svg') }}
 
+{% block subcontent %}
 <div class="p-4 max-w-xl mx-auto markdown">
   {{ heading(title) }}
   <div class="markdown text-center">
@@ -33,3 +30,4 @@ layout: top-overlay
 <div class="p-4 max-w-xl mx-auto markdown">
   {{ heading('Meet the team') }}
 </div>
+{% endblock %}

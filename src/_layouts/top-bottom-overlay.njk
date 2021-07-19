@@ -1,9 +1,13 @@
 {% extends './default.njk' %}
+{% from "macros/icon-header.njk" import iconHeader %}
 
 {% block content %}
   <div class="relative z-20 flex flex-col">
     <div class="relative z-20 w-full flex flex-col -mb-40 -mt-24 mx-auto max-w-5xl bg-white">
-      {{ content | safe }}
+      {% block topIcon %}
+        {{ iconHeader(icon) }}
+      {% endblock %}
+      {% block subcontent %}{% endblock %}
     </div>
   </div>
 {% endblock %}

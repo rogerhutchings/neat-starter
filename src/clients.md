@@ -1,6 +1,7 @@
 ---
 title: Clients
 layout: clients
+icon: '/src/static/images/icons/circle-handshake.svg'
 clients:
   - name: Parallels
     logo: static/images/clients/parallels.jpg

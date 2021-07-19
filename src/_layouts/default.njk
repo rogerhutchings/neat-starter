@@ -26,6 +26,7 @@
   <body class="">
 
     <header class="relative min-h-header" style="background: gray">
+      <img src="/static/images/backgrounds/{% block headerImageSrc %}bg-img-swoosh.jpg{% endblock %}" class="absolute w-full h-full object-cover" />
       <div class="relative z-10 hidden justify-between mx-auto pt-16 max-w-5xl md:flex p-4">
         {% if page.url == "/" %}
           <div class="text-white flex">
